@@ -1,0 +1,84 @@
+/* Navigation Bar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 60px;
+
+  background-color: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+/* Logo */
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* Navigation Links */
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* Authentication Buttons */
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn,
+.register-btn {
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.login-btn {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.login-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.register-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.register-btn:hover {
+  background: #1d4ed8;
+}
