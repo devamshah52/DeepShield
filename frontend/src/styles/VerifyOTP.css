@@ -1,0 +1,383 @@
+/* ========================= */
+/* VERIFY OTP PAGE */
+/* ========================= */
+
+.verify-page {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 60px;
+
+  padding: 60px;
+
+  background:
+    radial-gradient(
+      circle at 18% 35%,
+      rgba(99, 102, 241, 0.18),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 82% 70%,
+      rgba(139, 92, 246, 0.12),
+      transparent 32%
+    ),
+    #050711;
+
+  flex-wrap: wrap;
+}
+
+/* ========================= */
+/* LEFT PANEL */
+/* ========================= */
+
+.verify-left {
+
+  flex: 1;
+
+  min-width: 350px;
+
+  max-width: 520px;
+
+}
+
+.verify-left img {
+
+  width: 100%;
+
+  max-width: 420px;
+
+  margin-bottom: 25px;
+
+}
+
+.verify-left h1 {
+
+  font-size: 48px;
+
+  color: #f8fafc;
+
+  margin-bottom: 20px;
+
+  line-height: 1.2;
+
+}
+
+.verify-left p {
+
+  color: #94a3b8;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  margin-bottom: 30px;
+
+}
+
+/* ========================= */
+/* FEATURES */
+/* ========================= */
+
+.verify-features {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+}
+
+.verify-features div {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #cbd5e1;
+
+  font-weight: 600;
+
+}
+
+.verify-features svg {
+
+  color: #22d3ee;
+
+}
+
+/* ========================= */
+/* VERIFY CARD */
+/* ========================= */
+
+.verify-container {
+
+  flex: 1;
+
+  max-width: 480px;
+
+  background: rgba(13, 17, 29, 0.96);
+
+  backdrop-filter: blur(14px);
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(139, 92, 246, 0.06);
+
+  border: 1px solid #1e293b;
+
+}
+
+.verify-container h2 {
+
+  font-size: 34px;
+
+  color: #f8fafc;
+
+  margin-bottom: 10px;
+
+}
+
+.verify-subtitle {
+
+  color: #94a3b8;
+
+  margin-bottom: 35px;
+
+  line-height: 1.6;
+
+}
+
+.verify-subtitle strong {
+
+  color: #c4b5fd;
+
+}
+
+/* ========================= */
+/* FORM */
+/* ========================= */
+
+.verify-form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+
+}
+
+.form-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+.form-group label {
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+
+  color: #e2e8f0;
+
+}
+
+/* ========================= */
+/* INPUT BOX */
+/* ========================= */
+
+.input-box {
+
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 12px;
+
+  padding: 0;
+
+  background: #090c15;
+
+}
+
+.input-box:focus-within {
+
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 0 4px rgba(139, 92, 246, 0.14),
+    0 0 20px rgba(139, 92, 246, 0.08);
+
+}
+
+.input-box input {
+
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  padding: 15px 16px;
+
+  font-size: 16px;
+
+  background: transparent;
+
+  color: #f8fafc;
+
+  box-sizing: border-box;
+
+}
+
+.input-box input::placeholder {
+
+  color: #64748b;
+
+}
+
+/* ========================= */
+/* VALIDATION */
+/* ========================= */
+
+.error-input {
+
+  color: #f87171;
+
+}
+
+.input-box:has(.error-input) {
+
+  border-color: #ef4444;
+
+}
+
+.error-text {
+
+  color: #f87171;
+
+  margin-top: 6px;
+
+  font-size: 14px;
+
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.verify-btn {
+
+  margin-top: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 15px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s;
+
+  box-shadow:
+    0 10px 24px rgba(139, 92, 246, 0.30);
+
+}
+
+.verify-btn:hover {
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #8b5cf6
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 30px rgba(139, 92, 246, 0.42);
+
+}
+
+.verify-btn:disabled {
+
+  background: #475569;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:900px) {
+
+  .verify-page {
+
+    padding: 30px;
+
+  }
+
+  .verify-left {
+
+    text-align: center;
+
+  }
+
+  .verify-left img {
+
+    max-width: 320px;
+
+  }
+
+  .verify-left h1 {
+
+    font-size: 38px;
+
+  }
+
+  .verify-container {
+
+    width: 100%;
+
+  }
+
+}

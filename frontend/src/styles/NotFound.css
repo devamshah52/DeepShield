@@ -1,0 +1,187 @@
+/* ========================= */
+/* NOT FOUND PAGE */
+/* ========================= */
+
+.notfound-page {
+
+  min-height: 80vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 30px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(99, 102, 241, 0.08),
+      transparent 45%
+    );
+
+}
+
+
+/* ========================= */
+/* NOT FOUND CARD */
+/* ========================= */
+
+.notfound-card {
+
+  width: 100%;
+
+  max-width: 700px;
+
+  text-align: center;
+
+  background: rgba(13, 17, 29, 0.96);
+
+  backdrop-filter: blur(14px);
+
+  padding: 70px 40px;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, .35);
+
+  border: 1px solid #1e293b;
+
+}
+
+
+/* ========================= */
+/* ERROR CODE */
+/* ========================= */
+
+.notfound-card h1 {
+
+  font-size: 120px;
+
+  color: #a78bfa;
+
+  margin: 0;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  text-shadow:
+    0 0 35px rgba(139, 92, 246, .25);
+
+}
+
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+.notfound-card h2 {
+
+  margin-top: 20px;
+
+  font-size: 36px;
+
+  color: #f8fafc;
+
+}
+
+
+/* ========================= */
+/* DESCRIPTION */
+/* ========================= */
+
+.notfound-card p {
+
+  margin: 25px auto;
+
+  max-width: 500px;
+
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  font-size: 17px;
+
+}
+
+
+/* ========================= */
+/* HOME BUTTON */
+/* ========================= */
+
+.home-btn {
+
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding: 15px 34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: .3s;
+
+  box-shadow:
+    0 10px 24px rgba(139, 92, 246, .25);
+
+}
+
+
+.home-btn:hover {
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #8b5cf6
+    );
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(139, 92, 246, .40);
+
+}
+
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px) {
+
+  .notfound-card {
+
+    padding: 50px 25px;
+
+  }
+
+  .notfound-card h1 {
+
+    font-size: 90px;
+
+  }
+
+  .notfound-card h2 {
+
+    font-size: 28px;
+
+  }
+
+}

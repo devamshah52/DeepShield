@@ -1,45 +1,138 @@
+import { Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import "../styles/Home.css";
+
 import heroImage from "../assets/hero-ai.png";
 
+import Features from "../components/Features";
+import HowItWorks from "../components/HowItWorks";
+
 function Home() {
+
   return (
+
     <MainLayout>
+
       <section className="hero">
 
-  <div className="hero-content">
+        <div className="hero-content">
 
-    <h1>
-      Detect Deepfake Audio with Confidence
-    </h1>
+          <span className="hero-badge">
+            AI-Powered Audio Detection
+          </span>
 
-    <p>
-      DeepShield uses advanced Deep Learning techniques to detect
-      AI-generated, cloned, and manipulated voice recordings with
-      high accuracy.
-    </p>
 
-    <div className="hero-buttons">
+          <h1>
+            Detect Genuine
+            <br />
+            TTS &
+            <br />
+            Voice Conversion Audio
+          </h1>
 
-      <button className="primary-btn">
-        Analyze Audio
-      </button>
 
-      <button className="secondary-btn">
-        Learn More
-      </button>
+          <p>
+            DeepShield uses deep learning to analyze voice recordings
+            and classify audio as Genuine, TTS-generated, or
+            Voice Conversion audio with a prediction and confidence score.
+          </p>
 
-    </div>
 
-  </div>
+          <div className="hero-buttons">
 
-  <div className="hero-image">
-    <img src={heroImage} alt="DeepShield AI Shield" />
-  </div>
+            <Link
+              to="/login"
+              className="primary-btn"
+            >
+              Analyze Audio
+            </Link>
 
-</section>
+
+            <a
+              href="#features"
+              className="secondary-btn"
+            >
+              Explore Features
+            </a>
+
+          </div>
+
+
+          <div className="hero-stats">
+
+            <div className="stat-card">
+
+              <h3>98.96%</h3>
+
+              <span>
+                V3.2 Test Accuracy
+              </span>
+
+            </div>
+
+
+            <div className="stat-card">
+
+              <h3>3</h3>
+
+              <span>
+                Audio Classes
+              </span>
+
+            </div>
+
+
+            <div className="stat-card">
+
+              <h3>AI</h3>
+
+              <span>
+                Deep Learning Detection
+              </span>
+
+            </div>
+
+
+            <div className="stat-card">
+
+              <h3>Secure</h3>
+
+              <span>
+                Audio Analysis
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div className="hero-image">
+
+          <img
+            src={heroImage}
+            alt="DeepShield AI audio detection"
+          />
+
+        </div>
+
+      </section>
+
+
+      <div id="features">
+
+        <Features />
+
+      </div>
+
+
+      <HowItWorks />
+
     </MainLayout>
+
   );
+
 }
 
 export default Home;

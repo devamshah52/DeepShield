@@ -1,0 +1,767 @@
+/* ============================================================
+   ADMIN DASHBOARD
+   DEEPSHIELD DARK THEME
+   Same theme as Login / Register
+   ============================================================ */
+
+.admin-dashboard {
+  min-height: calc(100vh - 90px);
+
+  padding: 60px 80px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(99, 102, 241, 0.10),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 10% 50%,
+      rgba(34, 211, 238, 0.04),
+      transparent 30%
+    ),
+    #050711;
+
+  color: #f8fafc;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.admin-loading {
+  min-height: calc(100vh - 180px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.admin-loading-icon {
+  width: 70px;
+
+  height: 70px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(139, 92, 246, 0.12);
+
+  border:
+    1px solid rgba(139, 92, 246, 0.25);
+
+  color: #22d3ee;
+
+  font-size: 30px;
+
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.12);
+}
+
+.admin-loading h2 {
+  color: #f8fafc;
+
+  font-size: 30px;
+
+  margin-bottom: 10px;
+}
+
+.admin-loading p {
+  color: #94a3b8;
+
+  font-size: 16px;
+}
+
+.admin-loading button,
+.admin-back-login-btn {
+  margin-top: 25px;
+
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #7c3aed
+    );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 10px 25px rgba(139, 92, 246, 0.25);
+}
+
+.admin-loading button:hover,
+.admin-back-login-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(139, 92, 246, 0.35);
+}
+
+
+/* ============================================================
+   STATISTICS
+   ============================================================ */
+
+.admin-statistics {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-bottom: 38px;
+}
+
+
+/* ============================================================
+   STAT CARD
+   ============================================================ */
+
+.admin-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 17, 29, 0.98),
+      rgba(9, 12, 21, 0.98)
+    );
+
+  border-radius: 18px;
+
+  border:
+    1px solid #1e293b;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(139, 92, 246, 0.35);
+
+  box-shadow:
+    0 18px 40px rgba(139, 92, 246, 0.12);
+}
+
+
+/* ============================================================
+   STAT ICON
+   ============================================================ */
+
+.admin-stat-icon {
+  width: 58px;
+
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 15px;
+
+  background:
+    rgba(139, 92, 246, 0.12);
+
+  border:
+    1px solid rgba(139, 92, 246, 0.20);
+
+  color: #22d3ee;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 0 20px rgba(34, 211, 238, 0.05);
+}
+
+
+/* ============================================================
+   STAT TEXT
+   ============================================================ */
+
+.admin-stat-card h2 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 34px;
+
+  line-height: 1;
+}
+
+.admin-stat-card p {
+  margin-top: 8px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   SECTION TITLE
+   ============================================================ */
+
+.admin-section-title {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 22px;
+}
+
+.admin-section-title h2 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 28px;
+}
+
+.admin-section-title p {
+  margin-top: 7px;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+}
+
+.admin-section-title > svg {
+  color: #22d3ee;
+
+  font-size: 28px;
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(34, 211, 238, 0.25)
+    );
+}
+
+
+/* ============================================================
+   DETECTION OVERVIEW
+   ============================================================ */
+
+.admin-detection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+
+  margin-bottom: 45px;
+}
+
+
+/* ============================================================
+   DETECTION CARD
+   ============================================================ */
+
+.admin-detection-card {
+  padding: 30px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 17, 29, 0.98),
+      rgba(9, 12, 21, 0.98)
+    );
+
+  border-radius: 18px;
+
+  border:
+    1px solid #1e293b;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.admin-detection-card:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(34, 211, 238, 0.30);
+
+  box-shadow:
+    0 18px 40px rgba(34, 211, 238, 0.08);
+}
+
+
+/* ============================================================
+   DETECTION ICON
+   ============================================================ */
+
+.admin-detection-card > svg,
+.admin-detection-icon svg {
+  color: #22d3ee;
+
+  font-size: 35px;
+
+  margin-bottom: 15px;
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(34, 211, 238, 0.20)
+    );
+}
+
+
+/* ============================================================
+   DETECTION NUMBER
+   ============================================================ */
+
+.admin-detection-card h3 {
+  margin: 0;
+
+  color: #a78bfa;
+
+  font-size: 38px;
+}
+
+.admin-detection-card p {
+  margin-top: 8px;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+}
+
+
+/* ============================================================
+   RECENT ACTIVITY BOX
+   ============================================================ */
+
+.admin-activity-box {
+  padding: 35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 17, 29, 0.98),
+      rgba(9, 12, 21, 0.98)
+    );
+
+  border-radius: 20px;
+
+  border:
+    1px solid #1e293b;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.admin-activity-box .admin-section-title {
+  margin-bottom: 28px;
+}
+
+
+/* ============================================================
+   ACTIVITY TABLE
+   ============================================================ */
+
+.admin-activity-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.admin-activity-table {
+  width: 100%;
+
+  min-width: 750px;
+
+  border-collapse: collapse;
+}
+
+
+/* ============================================================
+   TABLE HEADER
+   ============================================================ */
+
+.admin-activity-table th {
+  padding: 16px;
+
+  text-align: left;
+
+  background:
+    rgba(139, 92, 246, 0.10);
+
+  color: #a78bfa;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid #1e293b;
+}
+
+.admin-activity-table th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.admin-activity-table th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+
+/* ============================================================
+   TABLE DATA
+   ============================================================ */
+
+.admin-activity-table td {
+  padding: 17px 16px;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  border-bottom:
+    1px solid #1e293b;
+}
+
+.admin-activity-table tbody tr {
+  transition: 0.2s;
+}
+
+.admin-activity-table tbody tr:hover {
+  background:
+    rgba(139, 92, 246, 0.05);
+}
+
+.admin-activity-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* ============================================================
+   FILE NAME
+   ============================================================ */
+
+.admin-file-name {
+  color: #e2e8f0;
+
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   USER NAME
+   ============================================================ */
+
+.admin-user-name {
+  color: #f8fafc;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   CONFIDENCE
+   ============================================================ */
+
+.confidence-value {
+  color: #cbd5e1;
+
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   DATE
+   ============================================================ */
+
+.admin-date {
+  color: #94a3b8;
+}
+
+
+/* ============================================================
+   PREDICTION BADGE
+   ============================================================ */
+
+.prediction-badge {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(34, 211, 238, 0.10);
+
+  border:
+    1px solid rgba(34, 211, 238, 0.20);
+
+  color: #22d3ee;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   STATUS BADGE
+   ============================================================ */
+
+.status-badge {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(239, 68, 68, 0.10);
+
+  border:
+    1px solid rgba(239, 68, 68, 0.20);
+
+  color: #f87171;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.status-completed {
+  background:
+    rgba(34, 197, 94, 0.10);
+
+  border:
+    1px solid rgba(34, 197, 94, 0.20);
+
+  color: #4ade80;
+}
+
+
+/* ============================================================
+   EMPTY ACTIVITY
+   ============================================================ */
+
+.admin-empty-activity {
+  padding: 55px 20px;
+
+  text-align: center;
+}
+
+.admin-empty-icon {
+  width: 65px;
+
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 18px;
+
+  background:
+    rgba(139, 92, 246, 0.10);
+
+  border:
+    1px solid rgba(139, 92, 246, 0.20);
+
+  color: #22d3ee;
+
+  font-size: 26px;
+}
+
+.admin-empty-activity h3 {
+  margin-bottom: 10px;
+
+  color: #f8fafc;
+
+  font-size: 20px;
+}
+
+.admin-empty-activity p {
+  color: #94a3b8;
+
+  font-size: 15px;
+}
+
+
+/* ============================================================
+   LOGOUT
+   ============================================================ */
+
+.admin-dashboard-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 25px;
+}
+
+.admin-logout-btn {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #dc2626
+    );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 8px 18px rgba(239, 68, 68, 0.18);
+}
+
+.admin-logout-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(239, 68, 68, 0.30);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+  .admin-dashboard {
+    padding: 50px 30px;
+  }
+
+  .admin-statistics {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .admin-dashboard {
+    padding: 35px 20px;
+  }
+
+  .admin-statistics {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .admin-stat-card {
+    padding: 23px;
+  }
+
+  .admin-detection-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .admin-section-title h2 {
+    font-size: 24px;
+  }
+
+  .admin-activity-box {
+    padding: 25px 18px;
+  }
+
+  .admin-dashboard-actions {
+    justify-content: center;
+  }
+
+  .admin-logout-btn {
+    width: 100%;
+  }
+
+}

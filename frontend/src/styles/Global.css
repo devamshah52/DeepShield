@@ -1,59 +1,313 @@
-/* Google Font */
+/* ========================= */
+/* GOOGLE FONT */
+/* ========================= */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* Reset */
+
+/* ========================= */
+/* RESET */
+/* ========================= */
 
 * {
+
   margin: 0;
+
   padding: 0;
+
   box-sizing: border-box;
+
 }
 
-/* Global Variables */
+
+/* ========================= */
+/* GLOBAL VARIABLES */
+/* ========================= */
 
 :root {
-  --primary-color: #2563eb;
-  --primary-dark: #1d4ed8;
 
-  --background-color: #f8fafc;
+  --primary-color: #8b5cf6;
 
-  --text-color: #1f2937;
+  --primary-dark: #7c3aed;
 
-  --secondary-text: #6b7280;
+  --accent-color: #22d3ee;
+
+  --background-color: #050711;
+
+  --surface-color: #0d111d;
+
+  --surface-dark: #090c15;
+
+  --text-color: #f8fafc;
+
+  --secondary-text: #94a3b8;
 
   --white: #ffffff;
 
-  --border-color: #e5e7eb;
+  --border-color: #1e293b;
+
 }
 
-/* Body */
+
+/* ========================= */
+/* HTML */
+/* ========================= */
+
+html {
+
+  background: #050711;
+
+}
+
+
+/* ========================= */
+/* BODY */
+/* ========================= */
 
 body {
+
   font-family: "Poppins", sans-serif;
 
-  background: var(--background-color);
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(99, 102, 241, 0.06),
+      transparent 35%
+    ),
+    #050711;
 
   color: var(--text-color);
 
   line-height: 1.6;
+
+  min-height: 100vh;
+
 }
 
-/* Links */
+
+/* ========================= */
+/* ROOT */
+/* ========================= */
+
+#root {
+
+  min-height: 100vh;
+
+  background: #050711;
+
+}
+
+
+/* ========================= */
+/* LINKS */
+/* ========================= */
 
 a {
+
   text-decoration: none;
+
   color: inherit;
+
 }
 
-/* Images */
+
+/* ========================= */
+/* IMAGES */
+/* ========================= */
 
 img {
+
   max-width: 100%;
+
 }
 
-/* Buttons */
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
 
 button {
+
   cursor: pointer;
+
   font-family: inherit;
+
+}
+
+/* ============================================================
+   DEEPSHIELD DETECTION BADGES
+============================================================ */
+
+
+/* =========================
+   BASE PREDICTION BADGE
+========================= */
+
+.prediction-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  border: 1px solid transparent;
+
+}
+
+
+/* =========================
+   GENUINE
+========================= */
+
+.prediction-badge.genuine {
+
+  color: #4ade80;
+
+  background: rgba(34, 197, 94, 0.10);
+
+  border-color: rgba(34, 197, 94, 0.30);
+
+}
+
+
+/* =========================
+   TTS
+========================= */
+
+.prediction-badge.tts {
+
+  color: #f87171;
+
+  background: rgba(239, 68, 68, 0.10);
+
+  border-color: rgba(239, 68, 68, 0.30);
+
+}
+
+
+/* =========================
+   VOICE CONVERSION
+========================= */
+
+.prediction-badge.voice-conversion {
+
+  color: #fbbf24;
+
+  background: rgba(245, 158, 11, 0.10);
+
+  border-color: rgba(245, 158, 11, 0.30);
+
+}
+
+
+/* =========================
+   PENDING
+========================= */
+
+.prediction-badge.pending {
+
+  color: #94a3b8;
+
+  background: rgba(100, 116, 139, 0.10);
+
+  border-color: rgba(100, 116, 139, 0.30);
+
+}
+
+
+/* ============================================================
+   STATUS BADGES
+============================================================ */
+
+.status-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  border: 1px solid transparent;
+
+}
+
+
+/* =========================
+   COMPLETED
+========================= */
+
+.status-badge.completed {
+
+  color: #4ade80;
+
+  background: rgba(34, 197, 94, 0.10);
+
+  border-color: rgba(34, 197, 94, 0.30);
+
+}
+
+
+/* =========================
+   WAITING
+========================= */
+
+.status-badge.waiting {
+
+  color: #fbbf24;
+
+  background: rgba(245, 158, 11, 0.10);
+
+  border-color: rgba(245, 158, 11, 0.30);
+
+}
+
+
+/* =========================
+   PROCESSING
+========================= */
+
+.status-badge.processing {
+
+  color: #60a5fa;
+
+  background: rgba(59, 130, 246, 0.10);
+
+  border-color: rgba(59, 130, 246, 0.30);
+
+}
+
+
+/* =========================
+   FAILED
+========================= */
+
+.status-badge.failed {
+
+  color: #f87171;
+
+  background: rgba(239, 68, 68, 0.10);
+
+  border-color: rgba(239, 68, 68, 0.30);
+
 }

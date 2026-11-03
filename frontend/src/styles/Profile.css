@@ -1,0 +1,501 @@
+/* ============================================================
+   DEEPSHIELD PROFILE
+============================================================ */
+
+.profile-page {
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 45px 35px 60px;
+
+  color: #f8fafc;
+
+}
+
+
+/* ============================================================
+   PROFILE HERO
+============================================================ */
+
+.profile-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 42px 30px 38px;
+
+  text-align: center;
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(99, 102, 241, 0.16),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(15, 20, 34, 0.98),
+      rgba(9, 12, 21, 0.98)
+    );
+
+  border: 1px solid #1e293b;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.28);
+
+}
+
+
+.profile-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+
+  height: 220px;
+
+  top: -155px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(139, 92, 246, 0.10);
+
+}
+
+
+.profile-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+
+  height: 100px;
+
+  right: -45px;
+
+  bottom: -45px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(34, 211, 238, 0.04);
+
+}
+
+
+/* ============================================================
+   PROFILE LABEL
+============================================================ */
+
+.profile-card::selection {
+
+  background: rgba(139, 92, 246, 0.30);
+
+}
+
+
+/* ============================================================
+   PROFILE AVATAR
+============================================================ */
+
+.profile-avatar {
+
+  position: relative;
+
+  z-index: 1;
+
+  width: 96px;
+
+  height: 96px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
+  border: 4px solid
+    rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(99, 102, 241, 0.25),
+    0 0 0 8px
+    rgba(99, 102, 241, 0.05);
+
+}
+
+
+.profile-card h2 {
+
+  position: relative;
+
+  z-index: 1;
+
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.3px;
+
+}
+
+
+.profile-card p {
+
+  position: relative;
+
+  z-index: 1;
+
+  margin: 8px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+}
+
+
+/* ============================================================
+   ACCOUNT INFORMATION
+============================================================ */
+
+.profile-info {
+
+  margin-top: 20px;
+
+  padding: 25px;
+
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 20, 34, 0.97),
+      rgba(9, 12, 21, 0.97)
+    );
+
+  border: 1px solid #1e293b;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.22);
+
+}
+
+
+.profile-info h3 {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0 0 8px;
+
+  color: #f1f5f9;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+}
+
+
+.profile-info h3::before {
+
+  content: "";
+
+  width: 4px;
+
+  height: 18px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #6366f1,
+      #a78bfa
+    );
+
+}
+
+
+/* ============================================================
+   INFORMATION ROWS
+============================================================ */
+
+.info-row {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  min-height: 58px;
+
+  padding: 14px 5px;
+
+  border-bottom: 1px solid
+    rgba(30, 41, 59, 0.85);
+
+  color: #cbd5e1;
+
+  transition:
+    background 0.20s ease,
+    padding 0.20s ease;
+
+}
+
+
+.info-row:hover {
+
+  padding-left: 10px;
+
+  padding-right: 10px;
+
+  background:
+    rgba(99, 102, 241, 0.035);
+
+}
+
+
+.info-row:last-child {
+
+  border-bottom: none;
+
+}
+
+
+.info-row span {
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+}
+
+
+.info-row strong {
+
+  max-width: 65%;
+
+  color: #e2e8f0;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+
+}
+
+
+/* ============================================================
+   STATISTIC VALUES
+============================================================ */
+
+.info-row:nth-child(4) strong {
+
+  color: #a5b4fc;
+
+}
+
+
+.info-row:nth-child(5) strong {
+
+  color: #4ade80;
+
+}
+
+
+.info-row:nth-child(6) strong {
+
+  color: #f87171;
+
+}
+
+
+.info-row:nth-child(7) strong {
+
+  color: #fb923c;
+
+}
+
+
+/* ============================================================
+   RESPONSIVE - TABLET
+============================================================ */
+
+@media (max-width: 768px) {
+
+  .profile-page {
+
+    padding:
+      30px 20px
+      45px;
+
+  }
+
+
+  .profile-card {
+
+    padding:
+      35px 22px;
+
+  }
+
+
+  .profile-info {
+
+    padding: 20px;
+
+  }
+
+
+  .info-row {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 14px 4px;
+
+  }
+
+
+  .info-row:hover {
+
+    padding-left: 7px;
+
+    padding-right: 7px;
+
+  }
+
+
+  .info-row strong {
+
+    max-width: 100%;
+
+    text-align: left;
+
+  }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE - MOBILE
+============================================================ */
+
+@media (max-width: 480px) {
+
+  .profile-page {
+
+    padding:
+      22px 13px
+      35px;
+
+  }
+
+
+  .profile-card {
+
+    padding:
+      30px 18px;
+
+    border-radius: 18px;
+
+  }
+
+
+  .profile-avatar {
+
+    width: 82px;
+
+    height: 82px;
+
+    font-size: 29px;
+
+  }
+
+
+  .profile-card h2 {
+
+    font-size: 21px;
+
+  }
+
+
+  .profile-card p {
+
+    font-size: 12px;
+
+  }
+
+
+  .profile-info {
+
+    padding: 18px;
+
+    border-radius: 17px;
+
+  }
+
+
+  .profile-info h3 {
+
+    font-size: 16px;
+
+  }
+
+}

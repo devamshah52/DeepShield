@@ -1,84 +1,667 @@
-/* Navigation Bar */
+/* =========================================================
+   DEEPSHIELD NAVBAR
+========================================================= */
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 15px 60px;
-
-  background-color: #ffffff;
-
-  border-bottom: 1px solid #e5e7eb;
-
   position: sticky;
+
   top: 0;
 
   z-index: 1000;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px 70px;
+
+  background: rgba(5, 7, 17, 0.95);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid #1e293b;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* Logo */
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #2563eb;
+  text-decoration: none;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  color: #f8fafc;
+
+  letter-spacing: -1px;
+
+  transition: all 0.3s ease;
 }
 
-/* Navigation Links */
+
+.logo:hover {
+  color: #a78bfa;
+
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
 
 .nav-links {
   display: flex;
+
+  align-items: center;
+
   list-style: none;
-  gap: 30px;
+
+  gap: 35px;
+
+  margin: 0;
+
+  padding: 0;
 }
+
 
 .nav-links a {
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #2563eb;
-}
-
-/* Authentication Buttons */
-
-.auth-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.login-btn,
-.register-btn {
-  padding: 10px 20px;
-
-  border-radius: 8px;
+  position: relative;
 
   text-decoration: none;
+
+  color: #cbd5e1;
+
+  font-size: 16px;
 
   font-weight: 600;
 
   transition: 0.3s;
 }
 
-.login-btn {
-  border: 2px solid #2563eb;
-  color: #2563eb;
+
+.nav-links a:hover {
+  color: #a78bfa;
 }
 
-.login-btn:hover {
-  background: #2563eb;
+
+.active-link {
+  color: #a78bfa !important;
+}
+
+
+.active-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -8px;
+
+  width: 100%;
+
+  height: 3px;
+
+  border-radius: 50px;
+
+  background: #8b5cf6;
+}
+
+
+/* =========================================================
+   AUTH BUTTON CONTAINER
+========================================================= */
+
+.auth-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   NAVBAR AUTH BUTTON BASE
+   IMPORTANT:
+   ".navbar ..." prevents conflicts with Login.css
+   and Register.css
+========================================================= */
+
+.navbar .login-btn,
+.navbar .register-btn {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 145px;
+
+  height: 50px;
+
+  padding: 0;
+
+  margin: 0;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   NAVBAR LOGIN BUTTON
+========================================================= */
+
+.navbar .login-btn {
+  background: #111624;
+
+  color: #c4b5fd;
+
+  border: 2px solid #8b5cf6;
+
+  box-shadow:
+    0 0 15px rgba(139, 92, 246, 0.08);
+}
+
+
+.navbar .login-btn:hover {
+  background: #8b5cf6;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(139, 92, 246, 0.35);
+}
+
+
+/* =========================================================
+   NAVBAR REGISTER / GET STARTED BUTTON
+========================================================= */
+
+.navbar .register-btn {
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
+  color: #ffffff;
+
+  border: 2px solid transparent;
+
+  box-shadow:
+    0 8px 18px rgba(139, 92, 246, 0.30);
+}
+
+
+.navbar .register-btn:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #8b5cf6
+    );
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(139, 92, 246, 0.45);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  font-size: 32px;
+
+  background: none;
+
+  border: none;
+
+  color: #a78bfa;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .navbar {
+    padding: 18px 30px;
+  }
+
+
+  .nav-links {
+    gap: 24px;
+  }
+
+
+  .navbar .login-btn,
+  .navbar .register-btn {
+
+    width: 120px;
+
+    height: 46px;
+
+    font-size: 15px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 16px 20px;
+  }
+
+
+  .logo {
+    font-size: 30px;
+  }
+
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 82px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: #050711;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px 0;
+
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.45);
+
+    border-bottom: 1px solid #1e293b;
+  }
+
+
+  .nav-links.active {
+    display: flex;
+  }
+
+
+  .auth-buttons {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-btn {
+
+  padding: 14px 28px;
+
+  background: #ef4444;
+
   color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
 }
 
-.register-btn {
-  background: #2563eb;
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+
+/* =========================================================
+   USER AVATAR
+========================================================= */
+
+.user-avatar {
+
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
   color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 8px 20px rgba(139, 92, 246, 0.25);
 }
 
-.register-btn:hover {
-  background: #1d4ed8;
+
+.user-avatar:hover {
+
+  transform: scale(1.08);
+
+  box-shadow:
+    0 12px 25px rgba(139, 92, 246, 0.40);
+}
+
+
+/* =========================================================
+   USER MENU
+========================================================= */
+
+.user-menu {
+  position: relative;
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+========================================================= */
+
+.profile-dropdown {
+
+  position: absolute;
+
+  top: 62px;
+
+  right: 0;
+
+  width: 270px;
+
+  background: #0d111d;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.50),
+    0 0 30px rgba(139, 92, 246, 0.08);
+
+  border: 1px solid #1e293b;
+
+  animation:
+    dropdownAnimation 0.25s ease;
+
+  z-index: 9999;
+}
+
+
+@keyframes dropdownAnimation {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(-12px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   DROPDOWN HEADER
+========================================================= */
+
+.dropdown-header {
+
+  padding: 24px;
+
+  text-align: center;
+
+  background: #111624;
+
+  border-bottom: 1px solid #1e293b;
+}
+
+
+.dropdown-avatar {
+
+  width: 62px;
+
+  height: 62px;
+
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
+  color: white;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+
+.dropdown-header h4 {
+
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 18px;
+}
+
+
+.dropdown-header p {
+
+  margin-top: 8px;
+
+  margin-bottom: 0;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   DROPDOWN ITEMS
+========================================================= */
+
+.dropdown-item {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 20px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #cbd5e1;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.dropdown-item:hover {
+
+  background: #17132a;
+
+  color: #ffffff;
+}
+
+
+.dropdown-item svg {
+
+  color: #a78bfa;
+
+  font-size: 17px;
+}
+
+
+.dropdown-item:hover svg {
+
+  color: #c4b5fd;
+}
+
+
+.logout-item {
+
+  color: #fca5a5;
+
+  border-top: 1px solid #1e293b;
+}
+
+
+.logout-item svg {
+
+  color: #f87171;
+}
+
+
+.logout-item:hover {
+
+  background: rgba(239, 68, 68, 0.10);
+
+  color: #fca5a5;
+}
+
+
+/* =========================================================
+   RESPONSIVE PROFILE DROPDOWN
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .profile-dropdown {
+
+    right: -5px;
+
+    width: 250px;
+
+  }
+
 }

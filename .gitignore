@@ -1,0 +1,90 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments and cache
+**/venv/
+**/.venv/
+**/__pycache__/
+*.py[cod]
+
+# Node.js
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# Logs and temporary files
+*.log
+logs/
+*.tmp
+*.temp
+
+# Uploaded audio and test recordings
+**/uploads/
+DeepShield_Test_Audio/
+exam audio/
+exam_demo_audio/
+tts_audio/
+baseline/exam_demo/exam_demo_audio/
+
+# Audio files (dataset and local test recordings)
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+
+# Model checkpoints and weights
+*.pth
+*.pt
+*.ckpt
+
+# Large datasets and archives
+backend/ml/dataset/
+backend/ml/dataset/LA.zip
+external_datasets/
+external_genuine/
+v3_1_dataset/
+v3_1_dataset_inspection/
+v3_2_dataset/
+
+# Experiment-generated files
+**/checkpoints/
+**/logs/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Generated ML feature cache
+*.npy
+backend/ml/features/cache/
+
+# Personal academic documents and presentations
+/32_IMCA_CPII_SEM9.docx
+/32_IMCA_CPII_SEM9.pdf
+/CP Presentation.pdf
+/CP Presentation.pptx
+
+# Generated evaluation reports and diagnostic outputs
+/backend/ml/evaluation/
+/baseline/evaluation/
+/baseline/exam_demo/
+/backend/ml/training/*.csv
+/backend/ml/mel_test.png
+
+# Generated ML evaluation results
+**/evaluation/*.csv
+**/evaluation/*.json
+**/evaluation/*.png
+**/evaluation/*.txt
+
+# Generated dataset manifests and metadata
+**/dataset/manifests/
+**/dataset/metadata/
+
+# Generated diagnostic images
+backend/ml/features/*.png

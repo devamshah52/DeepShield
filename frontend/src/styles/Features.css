@@ -1,0 +1,465 @@
+/* =========================================================
+   FEATURES SECTION
+========================================================= */
+
+.features {
+
+  position: relative;
+
+  padding: 100px 80px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 40%,
+      rgba(99, 102, 241, 0.07),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 60%,
+      rgba(34, 211, 238, 0.04),
+      transparent 30%
+    ),
+    #050711;
+
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+
+  max-width: 760px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+
+}
+
+
+.features-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 15px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid rgba(139, 92, 246, 0.28);
+
+  border-radius: 999px;
+
+  background: rgba(99, 102, 241, 0.08);
+
+  color: #c4b5fd;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+}
+
+
+.section-title h2 {
+
+  margin: 0 0 17px;
+
+  color: #f8fafc;
+
+  font-size: 42px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+
+}
+
+
+.section-title p {
+
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.feature-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 22px;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.feature-card {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  min-height: 175px;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 17, 29, 0.98),
+      rgba(9, 12, 21, 0.98)
+    );
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+
+}
+
+
+.feature-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+
+  height: 130px;
+
+  top: -70px;
+
+  right: -55px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(139, 92, 246, 0.07);
+
+  filter: blur(3px);
+
+  transition:
+    background 0.3s ease;
+
+}
+
+
+.feature-card:hover {
+
+  transform: translateY(-6px);
+
+  border-color: rgba(139, 92, 246, 0.65);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 19, 38, 0.98),
+      rgba(10, 13, 24, 0.98)
+    );
+
+  box-shadow:
+    0 16px 35px rgba(139, 92, 246, 0.14);
+
+}
+
+
+.feature-card:hover::before {
+
+  background:
+    rgba(139, 92, 246, 0.13);
+
+}
+
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.feature-icon {
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background:
+    rgba(99, 102, 241, 0.12);
+
+  border: 1px solid rgba(139, 92, 246, 0.18);
+
+  color: #22d3ee;
+
+  font-size: 23px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+
+}
+
+
+.feature-card:hover .feature-icon {
+
+  transform: scale(1.06);
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================================
+   FEATURE CONTENT
+========================================================= */
+
+.feature-content {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+.feature-card h3 {
+
+  margin: 3px 0 10px;
+
+  color: #f8fafc;
+
+  font-size: 19px;
+
+  line-height: 1.35;
+
+  font-weight: 700;
+
+}
+
+
+.feature-card p {
+
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .features {
+
+    padding: 85px 45px;
+
+  }
+
+
+  .feature-grid {
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .features {
+
+    padding: 70px 25px;
+
+  }
+
+
+  .section-title {
+
+    margin-bottom: 42px;
+
+  }
+
+
+  .section-title h2 {
+
+    font-size: 34px;
+
+  }
+
+
+  .section-title p {
+
+    font-size: 15.5px;
+
+  }
+
+
+  .feature-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+  }
+
+
+  .feature-card {
+
+    min-height: auto;
+
+    padding: 24px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .features {
+
+    padding: 60px 16px;
+
+  }
+
+
+  .section-title h2 {
+
+    font-size: 29px;
+
+  }
+
+
+  .features-badge {
+
+    font-size: 10px;
+
+    letter-spacing: 0.9px;
+
+  }
+
+
+  .feature-card {
+
+    gap: 14px;
+
+    padding: 21px;
+
+  }
+
+
+  .feature-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    font-size: 20px;
+
+  }
+
+
+  .feature-card h3 {
+
+    font-size: 17px;
+
+  }
+
+
+  .feature-card p {
+
+    font-size: 13.5px;
+
+  }
+
+}
